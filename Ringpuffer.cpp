@@ -34,7 +34,9 @@ Ringnode* Ringpuffer::addNode() {
    std::string desc="";
    std::string dta="";
    
+   std::cout <<std::endl;
    std::cout <<" Beschreibung ?> ";
+   std::cout <<"    ";
    std::cin>>desc;
    
    
@@ -109,20 +111,23 @@ void Ringpuffer::printRingpuffer() {
    }while (temp != Anker);
 }
 
-Ringnode* Ringpuffer::searchNode(std::string dataToBeFound) {
+void Ringpuffer::searchNode(std::string dataToBeFound) {
    
-   Ringnode* temp = Anker;
+   Ringnode *temp = Anker;
    
    do {
-	  if (temp->getData()==dataToBeFound){
-		 return temp;
+	  if (temp->getData() == dataToBeFound) {
+		 std::cout << "Gefunden in : ";
+		 std::cout << "OldAge: " << temp->getAge() << ", ";
+		 std::cout << "Desc: " << temp->getDescription() << ", ";
+		 std::cout << "Data: " << temp->getData() << std::endl;
+		 std::cout << "_ _ _ _ _ _ _ _ _ _ _ _ _ _ " << std::endl;
+		 return;
 	  }
-	  else {temp = temp->getNextPointer();}
-	  
-   }while (temp!=Anker);
+	  temp = temp->getNextPointer();
+   } while (temp != Anker);
    
-   return nullptr;
-   
+   std::cout<<"Es wurde kein Datensatz mit diesen Daten gefunden"<<std::endl;
 }
 
 int Ringpuffer::getAnzahlGenutzteNodes(void) {

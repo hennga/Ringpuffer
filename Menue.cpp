@@ -37,7 +37,8 @@ void Menue::callRingpufferMethods(int codeInt, Ringpuffer& Rp) {
 
    case 2:
       std::cout << searchText;
-	  Rp.searchNode(readSearchWord());
+	   Rp.searchNode(readSearchWord());
+	  
 	  break;
 	  
    case 3:

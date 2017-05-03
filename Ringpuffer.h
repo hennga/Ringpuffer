@@ -21,7 +21,7 @@ public:
 	
 	Ringnode *addNode();
 	
-	Ringnode *searchNode(std::string dataToBeFound);
+	void searchNode(std::string dataToBeFound);
 	
 	void printRingpuffer(void);
 	
