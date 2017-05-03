@@ -6,7 +6,9 @@
 #include <iostream>
 
 void Menue:: showSelectionMenue() const {
-   for (auto &eintrag : MenueText){
+  
+	
+	for (auto &eintrag : MenueText){
 	  std::cout<<eintrag << std::endl;
    }
 }

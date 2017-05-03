@@ -5,7 +5,7 @@
 #include "Ringpuffer.h"
 #include <iostream>
 
-Ringpuffer::Ringpuffer(int anzahlNodes =6) {
+Ringpuffer::Ringpuffer(int anzahlNodes) {
    
    GroesseRingpuffer =anzahlNodes;
    
@@ -71,7 +71,7 @@ Ringnode* Ringpuffer::addNode() {
    delete node5PointerToBeDeleted;
    
    incrementAnzahlGenutzteNodes();
-   
+   return   neu;
 }
 
 Ringnode* Ringpuffer::getAnker() const {
