@@ -5,11 +5,11 @@
 #include "RingNode.h"
 
 void Ringnode::setDescription(std::string desc) {
-   Description = desc;
+   this -> Description = desc;
 }
 
 void Ringnode::setData(std::string dta) {
-   SymbolicData=dta;
+   this-> SymbolicData=dta;
 }
 
 void Ringnode::setAge(int age) {
@@ -42,6 +42,6 @@ std::string Ringnode::getDescription() {
 }
 
 Ringnode* Ringnode::getNextPointer() {
-   return this->next;
+   return next;
    
 }

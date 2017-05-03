@@ -15,6 +15,7 @@ void Menue:: showSelectionMenue() const {
 
 int Menue::readMenueSelection() {
    int input = 0;
+   std::cout<<"?> ";
    std::cin >> input;
    return input;
 }
@@ -31,7 +32,7 @@ void Menue::callRingpufferMethods(int codeInt, Ringpuffer& Rp) {
    case 1 :
       std::cout << insertText;
 	  Rp.addNode();
-	  std::cout<<afterInsertText;
+	  std::cout<<afterInsertText<<std::endl;
 	  break;
 
    case 2:
@@ -43,7 +44,7 @@ void Menue::callRingpufferMethods(int codeInt, Ringpuffer& Rp) {
 	  Rp.printRingpuffer();
 	   break;
 	
-   default: (std::cout <<"Kein Befehl fuer diese Eingabe bekannt");
+   default: {std::cout <<"Kein Befehl fuer diese Eingabe bekannt" << std::endl; }
  }
 }
 

@@ -30,6 +30,10 @@ public:
 	void incrementAnzahlGenutzteNodes(void);
 	
 	int getAnzahlGenutzteNodes(void);
+	
+	void setAnker(Ringnode* newAnker);
+	
+	
  
  
 };
